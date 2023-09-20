@@ -55,7 +55,9 @@ Before you begin, ensure you have met the following requirements:
     
   ```
 
-3. ```sh
+  
+4.
+    ```sh
     npm install
 
    ```
