@@ -49,9 +49,16 @@ Before you begin, ensure you have met the following requirements:
 
    ```
 
-2. cd dnd-gallery
+2.
+    ```sh
+    cd dnd-gallery
+    
+  ```
 
-3. npm install
+3. ```sh
+    npm install
+
+   ```
 
 ### Usage
 
