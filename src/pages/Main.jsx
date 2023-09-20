@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import Login from "../components/auth/Login";
 import ImageGallery1 from "../components/ImageGallery";
 import { arrayMove } from "@dnd-kit/sortable";
-// import useAxios from "../components/hooks/useAxios";
-// import ImageGallary from "../components/ImageGallary";
 import icecream from "../assets/icecream.webp";
 import avengers from "../assets/avengers-island.webp";
 import castle from "../assets/castle.webp";
@@ -33,10 +31,6 @@ const Main = () => {
     { id: "12", url: teddies, title: "Teddies", type: "nft" },
   ];
 
-  // const { response, isLoading, error, fetchData } = useAxios(
-  //   `search/photos?page=1&query=office&client_id=${process.env.REACT_APP_ACCESS_KEY}`
-  // );
-  // console.log(response);
   const [authentication, setAuthentication] = useState(false);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
