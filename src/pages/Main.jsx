@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Login from "../components/auth/Login";
-// import ImageGallary from "../components/ImageGallary";
-import icecream from "../assets/icecream.svg";
-import avengers from "../assets/avengers-island.svg";
-import castle from "../assets/castle.svg";
-import clouds from "../assets/cloud-island.svg";
-import fantasy from "../assets/fantasy-island.svg";
-import road_house from "../assets/road-house.svg";
-import solar_house from "../assets/solar-house.svg";
-import stonelight from "../assets/stonelight.svg";
 import ImageGallery1 from "../components/ImageGallery";
-import hut from "../assets/hut.svg";
-import candy from "../assets/candy.svg";
-import kingslanding from "../assets/kingslanding.svg";
-import teddies from "../assets/teddies.svg";
-
 import { arrayMove } from "@dnd-kit/sortable";
+// import useAxios from "../components/hooks/useAxios";
+// import ImageGallary from "../components/ImageGallary";
+import icecream from "../assets/icecream.webp";
+import avengers from "../assets/avengers-island.webp";
+import castle from "../assets/castle.webp";
+import clouds from "../assets/cloud-island.webp";
+import fantasy from "../assets/fantasy-house.webp";
+import road_house from "../assets/road-house.webp";
+import solar_house from "../assets/solar-house.webp";
+import stonelight from "../assets/stonelight.webp";
+import hut from "../assets/hut.webp";
+import candy from "../assets/candy.webp";
+import kingslanding from "../assets/kingslanding.webp";
+import teddies from "../assets/teddies.webp";
 
 const Main = () => {
   const imageItems = [
@@ -33,6 +33,10 @@ const Main = () => {
     { id: "12", url: teddies, title: "Teddies", type: "nft" },
   ];
 
+  // const { response, isLoading, error, fetchData } = useAxios(
+  //   `search/photos?page=1&query=office&client_id=${process.env.REACT_APP_ACCESS_KEY}`
+  // );
+  // console.log(response);
   const [authentication, setAuthentication] = useState(false);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -41,7 +45,7 @@ const Main = () => {
     setTimeout(() => {
       setLoading(false);
       setImages(imageItems);
-    }, 20000);
+    }, 10000);
   }, []);
 
   const handleAccess = () => {

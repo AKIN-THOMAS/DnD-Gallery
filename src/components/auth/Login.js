@@ -73,9 +73,9 @@ const Login = ({ onLogin }) => {
             </InputGroup>
           </div>
 
-          <div className="submit-btn">
-            <button type="submit">Sign in</button>
-          </div>
+          <button className="submit-btn" type="submit">
+            Sign in
+          </button>
         </div>
       </form>
     </div>
