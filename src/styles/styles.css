@@ -89,9 +89,10 @@ body {
 }
 
 .submit-error-msg {
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
   box-sizing: border-box;
   background-color: #f58b8b;
   padding: 15px 26px 13px 27px;
@@ -122,10 +123,11 @@ body {
 
 .img-gallery {
   /* margin-top: 80px; */
+  margin: 100px 8px 7px 55px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  width: 80%;
-  margin: 100px;
+  width: 85%;
+  /* margin: 100px; */
   gap: 20px;
   justify-items: center;
   height: 100vh;
@@ -244,7 +246,29 @@ body {
 
 @media screen and (max-width: 768px) {
   .img-gallery {
-    margin: 50px;
+    margin: 50px 20px 10px -20px;
+    width: 108%;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  .submit-error-msg {
+    width: 80%;
+  }
+}
+@media (max-width: 320px) {
+  .img-card {
+    width: 220px;
+    margin: 50px 0px 10px -20px;
+  }
+  /* .login-form{
+    width: 80%;
+  } */
+  .input-box {
+    width: 80%;
+  }
+}
+@media (max-width: 280px) {
+  .img-card {
+    width: 220px;
+    margin: 50px 50px 10px -20px;
   }
 }

@@ -7,6 +7,7 @@ const Login = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +30,10 @@ const Login = ({ onLogin }) => {
     }
   };
 
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className="login-section">
       <form onSubmit={handleSubmit}>
@@ -47,7 +52,6 @@ const Login = ({ onLogin }) => {
               type="email"
               onChange={(e) => setEmail(e.target.value)}
               outline={"none"}
-              width={"300.37px"}
               autoFocus
             />
           </div>
@@ -58,17 +62,19 @@ const Login = ({ onLogin }) => {
                 variant={"filled"}
                 placeholder="1Password"
                 value={password}
-                type="text"
+                type={showPassword ? "text" : "password"}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <InputRightAddon>
-                <button>Show</button>
+              <InputRightAddon onClick={togglePassword} cursor={"pointer"}>
+                <button onClick={togglePassword}>
+                  {showPassword ? "Hide" : "Show"}
+                </button>
               </InputRightAddon>
             </InputGroup>
           </div>
 
           <div className="submit-btn">
-            <button type="submit">Submit</button>
+            <button type="submit">Sign in</button>
           </div>
         </div>
       </form>
