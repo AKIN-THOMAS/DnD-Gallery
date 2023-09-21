@@ -3,7 +3,7 @@ import Error from "./Error";
 import { DndContext, closestCenter } from "@dnd-kit/core";
 import {
   SortableContext,
-  verticalListSortingStrategy,
+  // verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import Sortable from "./Sortable";
 
@@ -44,7 +44,7 @@ const ImageGallery1 = ({ images, loading, handleDragEnd }) => {
           >
             <SortableContext
               items={images}
-              strategy={verticalListSortingStrategy}
+              // strategy={verticalListSortingStrategy}
               // className="img-gallery"
             >
               {filteredImages.length === 0 ? (
