@@ -49,9 +49,16 @@ Before you begin, ensure you have met the following requirements:
 
    ```
 
-2. cd dnd-gallery
+2. Go into the directory
+    ```sh
+    cd dnd-gallery
+    ```
+     
 
-3. npm install
+3. Install Dependencies
+    ```sh
+    npm install
+    ```
 
 ### Usage
 
